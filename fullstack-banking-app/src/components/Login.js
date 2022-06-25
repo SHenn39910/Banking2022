@@ -60,15 +60,28 @@ class Login extends React.Component {
                                 onChange={this.handleInputChange}
                             />    
                         </Form.Group>
+                        <Form.Group controlId="password">
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control
+                                type="password"
+                                name="password"
+                                placeholder="Enter password"
+                                onChange={this.handleInputChange}
+                            />
+                        </Form.Group>
+                        <div className="action-items">
+                            <Button variant="primary" type="submit">
+                                Login
+                            </Button>
+                            <Link to="/register" className="btn btn-secondary">
+                                Create Account
+                            </Link>
+                        </div>
                     </Form>
                 </div>
             </div>
-        )
-    }
-}
-
-const Login = () => {
-    return <div>Login Page</div>;
-};
-
-export default Login;
+        );
+                        }
+                    }
+                
+export default connect()(Login);
